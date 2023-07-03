@@ -1,16 +1,16 @@
 version: '3.5'
 
 services:
-  voll-db:
-    container_name: postgres-voll-db
+  voll-db-teste:
+    container_name: postgres-voll-db-test
     image: postgres:13.6
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       PGDATA: /data/postgres
-      POSTGRES_DB: volldb, volldb-test
+      POSTGRES_DB: volldb-test
     ports:
-      - "5431:5432"
+      - "5430:5432"
     networks:
       - postgres
     restart: unless-stopped
